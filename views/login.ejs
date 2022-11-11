@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- BOOTSTRAP CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+    <div class="home-background">
+
+        <nav class="navbar navbar-light" style="background-color: #fff8de;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="/logo.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-top">
+                    Student Portal
+                </a>
+                <!-- <form class="d-flex" role="search">
+                    <a href="/admin"><button class="submit-btn">Admin</button></a>
+                </form> -->
+            </div>
+        </nav>
+
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+                <button type="button" class="toggle-btn" onclick="register()">Register</button>
+            </div>
+
+            <form id="login-form" action="/login" method="post">
+                <div class="mb-3">
+                    
+                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="User ID/Email Address" autocomplete="off" required>
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+                  <label class="form-check-label" for="exampleCheck1">Remember Password</label>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+            <br>
+            <p>Login as Admin ? <a href="/adminPassword">click here</a></p>
+
+        </div>
+    </div>
+
+    <script>
+        
+        function register(){
+            window.location = "/register";
+        }
+        function login(){
+            window.location = "/login";
+        }
+    </script>
+
+</body>
+</html>
