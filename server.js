@@ -35,7 +35,8 @@ app.use(methodOverride("_method"))
 // data base connection
 var db=mysql.createConnection(
     {
-        host:"localhost",
+        const hostname : '0.0.0.0';
+	const port : 3000;
         user: "root",
         password: "",
         database: "users"
@@ -202,4 +203,6 @@ function checkNotAuthenticated(req, res, next){
 db.query(`truncate users.mytable`);
 
 
-app.listen(3000)
+app.listen(port, hostname, () => {
+	console.log(`server running at http://${hostname}:${port}/`);
+}
